@@ -1,0 +1,28 @@
+<div class="com_top">
+	<h2><a href="{:U('Mobile/User/userinfo')}">设置</a></h2>
+	<p class="tuij_cas">
+	        {$user['nickname']}
+            <if condition="$first_nickname neq ''">
+            	<br />
+            	<span>由( {$first_nickname} )推荐</span>
+            </if>
+    </p>
+	<dl>
+		<dt>
+		<img src='{$user[head_pic]|default="__STATIC__/images/user68.jpg"}' />
+        
+		<dd>{$level_name}</dd>
+		</dt>
+	</dl>
+</div>
+<div class="uer_topnav">
+	<ul>
+		<li class="bain" style="background-image:url('/Template/mobile/new/Static/images/111134534345.jpg'); height:45px; width:120px">
+       <span  style="float:left; text-align:left; margin-top:15px; margin-left:17px"><?=date('d')?>
+       </span>        </li>
+		<li class="bain" style="background-image:url('/Template/mobile/new/Static/images/1111145436446.jpg'); height:45px; width:120px">
+       <span  style="float:left; text-align:left; margin-top:15px; margin-left:17px"><?=date('d')?>
+       </span>        </li>
+		<!--<li><a href="{:U('Mobile/User/comment')}"><span>{$comment_count}</span>我的评价</a></li>-->
+	</ul>
+</div>

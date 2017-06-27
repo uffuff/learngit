@@ -1,0 +1,12 @@
+<foreach name="account_log" item="vo">
+	                <li class="list_add J_add">
+	                    <div class="td_l">
+	                        <p>订单编号: {$vo.order_sn}</p>
+	                        <p>支付状态:<if condition="$vo[pay_status] eq 0">待支付&nbsp;&nbsp;<a href="{:U('User/recharge',array('order_id'=>$vo[order_id]))}" class="">详情</a><else/>已支付</if></p>
+	                    </div>
+	                    <div class="td_r">
+	                        <p class="il_money">实付金额:{$vo.order_amount}</p>
+	                        <p class="time">{$vo.confirm_time|date='Y-m-d H:i:s',###}</p>
+	                    </div>
+	                </li>
+                </foreach>
